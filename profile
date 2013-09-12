@@ -21,7 +21,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# set PYTHONPATH for Google App Engine 1.8.3
+# set PYTHONPATH for Google App Engine 1.8.4
+PYTHONPATH="$HOME/google_appengine:$PYTHONPATH"
 PYTHONPATH="$HOME/google_appengine/lib/antlr3:$PYTHONPATH"
 PYTHONPATH="$HOME/google_appengine/lib/argparse:$PYTHONPATH"
 PYTHONPATH="$HOME/google_appengine/lib/cacerts:$PYTHONPATH"
@@ -58,3 +59,4 @@ PYTHONPATH="$HOME/google_appengine/lib/webob-1.1.1:$PYTHONPATH"
 PYTHONPATH="$HOME/google_appengine/lib/webob-1.2.3:$PYTHONPATH"
 PYTHONPATH="$HOME/google_appengine/lib/yaml:$PYTHONPATH"
 PYTHONPATH="$HOME/google_appengine/lib/yaml-3.10:$PYTHONPATH"
+export PYTHONPATH

@@ -1,4 +1,8 @@
 "
+" Auto relod .vimrc
+"
+autocmd! bufwritepost .vimrc source %
+"
 " Use gmarik/Vundle package manager 
 "
 set nocompatible
@@ -7,16 +11,25 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " let Vundle manage Bundle
 Bundle 'gmarik/vundle'
+Bundle 'flazz/vim-colorschemes'
 Bundle 'scrooloose/nerdtree'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
 Bundle 'wincent/Command-T'
+Bundle 'tomtom/tcomment_vim'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'python.vim'
-Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-ragtag'
+Bundle 'gregsexton/MatchTag'
 Bundle 'othree/html5.vim'
+Bundle 'mattn/emmet-vim' 
+Bundle 'pangloss/vim-javascript'
+Bundle 'itspriddle/vim-jquery'
 Bundle 'JulesWang/css.vim'
+Bundle 'skammer/vim-css-color'
 Bundle 'Jinja'
+Bundle 'python.vim'
 "
 " Mladen Baranek vimrc preferences
 "
@@ -27,18 +40,19 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
 set number
 set noswapfile
 syntax on
-colorscheme murphy
+set t_Co=256            " Enable 256 colors
+colorscheme google
 set laststatus=2
 set encoding=utf-8
 set fileformat=unix
 filetype indent on
+filetype plugin on
 set autoindent
-set foldmethod=indent
+set foldmethod=indent   "Fold based on indent 
+set nofoldenable        "Do not fold on open by default 
 "
 " Python specific settings
 "
