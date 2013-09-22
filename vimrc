@@ -28,7 +28,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'JulesWang/css.vim'
 Bundle 'skammer/vim-css-color'
-Bundle 'Jinja'
+Bundle 'lepture/vim-jinja'
 Bundle 'python.vim'
 "
 " Mladen Baranek vimrc preferences
@@ -41,7 +41,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set number
-set noswapfile
+" set noswapfile " use swap files on flaky connections
 syntax on
 set t_Co=256            " Enable 256 colors
 colorscheme google
@@ -72,3 +72,12 @@ au BufRead,BufNewFile *html,*css,*js,*jinja set tabstop=2
 au BufRead,BufNewFile *html,*css,*js,*jinja set softtabstop=2
 au BufRead,BufNewFile *html,*css,*js,*jinja set shiftwidth=2
 au BufRead,BufNewFile *html,*css,*js,*jinja set expandtab
+"
+" Tab movement 
+"
+nnoremap th  :tabfirst<CR>
+nnoremap tk  :tabnext<CR>
+nnoremap tj  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap td  :tabclose<CR>
+nnoremap tn  :tabnew<CR>
