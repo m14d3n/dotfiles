@@ -22,7 +22,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
 Bundle 'gregsexton/MatchTag'
-Bundle 'othree/html5.vim'
+"Bundle 'othree/html5.vim'
 Bundle 'mattn/emmet-vim' 
 Bundle 'pangloss/vim-javascript'
 Bundle 'itspriddle/vim-jquery'
@@ -30,6 +30,11 @@ Bundle 'JulesWang/css.vim'
 Bundle 'skammer/vim-css-color'
 Bundle 'lepture/vim-jinja'
 Bundle 'python.vim'
+"
+" Java 
+"
+" Bundle 'vim-scripts/javacomplete'
+Bundle 'vim-scripts/Vim-JDE'
 "
 " Mladen Baranek vimrc preferences
 "
@@ -64,7 +69,7 @@ au BufRead,BufNewFile *.py,*.pyw set expandtab
 highlight BadWhitespace ctermbg=red guibg=red
 au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
 au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /\s\+$/
-au BufRead,BufNewFile *.py,*.pyw set textwidth=79
+" au BufRead,BufNewFile *.py,*.pyw set textwidth=79
 "
 " HTML/CSS/JS specific settings
 "
@@ -72,6 +77,7 @@ au BufRead,BufNewFile *html,*css,*js,*jinja set tabstop=2
 au BufRead,BufNewFile *html,*css,*js,*jinja set softtabstop=2
 au BufRead,BufNewFile *html,*css,*js,*jinja set shiftwidth=2
 au BufRead,BufNewFile *html,*css,*js,*jinja set expandtab
+au BufRead,BufNewFile *html,*jinja set omnifunc=htmlcomplete#CompleteTags
 "
 " Tab movement 
 "
